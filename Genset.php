@@ -48,9 +48,9 @@ class Genset extends Command
     {
         $this->entity = strtolower($this->argument('entity'));
 
-        // $this->createMigration();
-        // $this->createSeeder();
-        // $this->createModel();
+        $this->createMigration();
+        $this->createSeeder();
+        $this->createModel();
         $this->createView();
     }
 
