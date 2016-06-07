@@ -51,6 +51,7 @@ class Genset extends Command
         $this->createMigration();
         $this->createSeeder();
         $this->createModel();
+        $this->createController();
         $this->createView();
     }
 
@@ -79,7 +80,7 @@ class Genset extends Command
 
     private function createController()
     {
-        $this->call('make:model', [
+        $this->call('make:controller', [
             'name'       => ucfirst($this->entity).'Controller',
             '--resource' => true,
         ]);
@@ -121,6 +122,6 @@ class Genset extends Command
             }
         }
 
-        $this->info('Done...');
+        $this->info('Views created successfully.');
     }
 }
